@@ -4,8 +4,8 @@ shinyUI(pageWithSidebar(
   sidebarPanel(
     h3("Risk assessment to predict the risk of a heart attack"),
     numericInput("gender", "If Female, enter 1. If Male, enter 0.", 0, min = 0, max = 1, step = 1),
-    numericInput("age", "Age", 0, min = 0, max = 130, step = 1),
-    numericInput("sbp", "Systolic Blood Pressure", 70, min = 70, max = 200, step = 1),
+    numericInput("age", "Age:", 0, min = 0, max = 130, step = 1),
+    numericInput("sbp", "Systolic Blood Pressure:", 70, min = 70, max = 200, step = 1),
     numericInput("smoker", "Smoker? If Yes, enter 1. If No, enter 0.", 0, min = 0, max = 1, step = 1),
     numericInput("chol", "Cholesterol Level:", 100, min = 100, max = 500, step = 1),
     numericInput("hdl", "High-Density Lipoprotein (HDL) Cholesterol in mg/dL (high HDL reduces the risk for heart disease):", 0, min = 0, max = 200, step = 1),
