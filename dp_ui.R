@@ -8,7 +8,7 @@ shinyUI(pageWithSidebar(
     numericInput("sbp", "Systolic Blood Pressure:", 70, min = 70, max = 200, step = 1),
     numericInput("smoker", "Smoker? If Yes, enter 1. If No, enter 0.", 0, min = 0, max = 1, step = 1),
     numericInput("chol", "Cholesterol Level:", 100, min = 100, max = 500, step = 1),
-    numericInput("hdl", "High-Density Lipoprotein (HDL) Cholesterol in mg/dL (high HDL reduces the risk for heart disease):", 0, min = 0, max = 200, step = 1),
+    numericInput("hdl", "High-Density Lipoprotein (HDL) Cholesterol in mg/dL (high HDL reduces the risk for heart disease):", 1, min = 1, max = 200, step = 1),
     numericInput("diabetes", "If previously diagnosed with diabetes, enter 1. Otherwise, enter 0.", 0, min = 0, max = 1, step = 1),
     submitButton("Submit"),
     dateInput("date", "Date:")
@@ -26,7 +26,7 @@ shinyUI(pageWithSidebar(
     h4("Your cholesterol level:"),
     verbatimTextOutput("yourChol"),
     h4("Your HDL:"),
-    verbatimTextOutput("hdl"),
+    verbatimTextOutput("yourhdl"),
     h4("Your diabetes:"),
     verbatimTextOutput("yourDiabetes"),
     h4("Your Framingham CVD risk estimate is:"),
@@ -36,6 +36,5 @@ shinyUI(pageWithSidebar(
     p(" ")
   )
 ))
-
 
 
